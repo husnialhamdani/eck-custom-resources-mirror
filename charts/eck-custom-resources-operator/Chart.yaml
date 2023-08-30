@@ -1,0 +1,13 @@
+apiVersion: v2
+appVersion: 0.6.0
+description: Helm chart for eck-custom-resources operator
+home: https://github.com/husnialhamdani/eck-custom-resources-mirror
+maintainers:
+- email: marek@xco.sk
+  name: Marek Hornak
+  url: https://github.com/husnialhamdani
+name: eck-custom-resources-operator
+sources:
+- https://github.com/husnialhamdani/eck-custom-resources-mirror
+type: application
+version: 0.6.0

@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: elasticsearchuser-secret
+type: Opaque
+data:
+  elasticsearchuser-sample: c2FtcGxlLnBhc3N3b3Jk
+
+---
+apiVersion: es.eck.github.com/v1alpha1
+kind: ElasticsearchUser
+metadata:
+  name: elasticsearchuser-sample
+spec:
+  targetInstance:
+    name: elasticsearch-quickstart
+  secretName: elasticsearchuser-secret
+  body: |
+    {
+      "roles" : [ "admin", "elasticsearchrole-sample" ],
+      "full_name" : "Richard Feynman",
+      "email" : "rfeynman@example.com",
+      "metadata" : {
+        "intelligence" : 7
+      }
+    }

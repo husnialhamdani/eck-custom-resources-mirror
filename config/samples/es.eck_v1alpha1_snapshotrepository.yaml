@@ -1,0 +1,14 @@
+apiVersion: es.eck.github.com/v1alpha1
+kind: SnapshotRepository
+metadata:
+  name: snapshotrepository-sample
+spec:
+  targetInstance:
+    name: elasticsearch-quickstart
+  body: |
+    {
+      "type": "fs",
+      "settings": {
+        "location": "/tmp/"
+      }
+    }
